@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace ArraysAndLists
 {
@@ -27,6 +29,41 @@ namespace ArraysAndLists
              *
              * Try to be creative in your display
              */
+
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var evens = new List<int>();
+            evens.Add(0);
+            var odds = new List<int>();
+            odds.Add(0);   
+
+            foreach (int number in numbers)
+            {
+                if (number % 2 == 0)
+                {
+                    evens.Add(number);              
+                }
+                else
+                {
+                    odds.Add(number);                 
+                }            
+            }
+
+            Console.WriteLine("Evens");
+
+            foreach (int number in evens)
+            {
+                Console.WriteLine(number);
+
+            }
+
+            Console.WriteLine("Odds");
+
+            foreach (int number in odds)
+            {
+                Console.WriteLine(number);
+
+            }
+            
         }
     }
 }
